@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar flex items-end bg-none">
+      <div className="navbar flex items-center sm:items-end bg-none">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
             <label tabIndex="0" className="btn btn-ghost btn-circle">
@@ -60,7 +60,9 @@ const Navbar = () => {
           <h1 className="font-bold text-3xl">
             Health<span className="text-brand">GPT</span>
           </h1>
-          <div className="text-lg">An AI-Powered Patient Diagnosis Tool</div>
+          <div className="text-lg hidden sm:block">
+            An AI-Powered Patient Diagnosis Tool
+          </div>
         </div>
         <div className="navbar-end">
           <DarkModeToggle />
