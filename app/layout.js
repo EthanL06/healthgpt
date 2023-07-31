@@ -9,7 +9,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <html data-theme="dark" lang="en">
+    <html data-theme="light" lang="en">
       <body
         className={`${manrope.className} flex flex-col items-center min-h-screen `}
       >
