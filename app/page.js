@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 const Diagnosis = () => {
   const [message, setMessage] = useState("");
+  const [showExample, setShowExample] = useState(true);
 
   const [messagesArray, setMessagesArray] = useState([
     {
@@ -19,6 +20,7 @@ const Diagnosis = () => {
   const chatRef = useRef(null);
 
   const handleMessageSend = (e) => {
+    setShowExample(false);
     const input = document.getElementById("message-input").value;
 
     if (input.trim() === "") return;
@@ -51,10 +53,26 @@ const Diagnosis = () => {
   }, [messagesArray]);
 
   return (
-    <div className="w-full sm:w-[40rem] font-medium pt-12 px-4">
+    <div className="w-full sm:w-[40rem] font-medium pt-6 px-4">
       {messagesArray.map((message, index) => (
         <TextBubble text={message.text} isUser={message.isUser} key={index} />
       ))}
+
+      {showExample && (
+        <div className="flex w-full justify-center mt-4">
+          <button
+            onClick={(e) => {
+              document.getElementById("message-input").value =
+                "A 50-year-old male presents with a history of recurrent kidney stones and osteopenia. He has been taking high-dose vitamin D supplements due to a previous diagnosis of vitamin D deficiency. Laboratory results reveal hypercalcemia and hypercalciuria. What is the likely diagnosis, and what is the treatment?";
+
+              handleMessageSend(e);
+            }}
+            className="btn btn-outline border-brand text-brand"
+          >
+            Try An Example Prompt
+          </button>
+        </div>
+      )}
 
       <div className="flex items-center gap-x-4 mt-6" ref={chatRef}>
         <input
