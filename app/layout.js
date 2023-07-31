@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
         className={`${manrope.className} flex flex-col items-center min-h-screen`}
       >
         <div className="flex flex-col items-center w-full sm:w-[30rem] pt-8 px-12 text-center">
-          <div className="font-bold text-5xl">
+          <h1 className="font-bold text-5xl">
             Health<span className="text-brand">GPT</span>
-          </div>
+          </h1>
           <div className="text-xl">An AI-Powered Patient Diagnosis Tool</div>
           <div className="divider"></div>
         </div>

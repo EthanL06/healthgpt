@@ -14,6 +14,16 @@ module.exports = {
         brand: "#570df8",
       },
     },
+    daisyui: {
+      themes: [
+        {
+          light: {
+            ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+            "base-100": "#FAFAFA",
+          },
+        },
+      ],
+    },
   },
   plugins: [require("daisyui")],
 };
