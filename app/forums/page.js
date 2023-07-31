@@ -26,7 +26,7 @@ const Forums = () => {
   }, []);
 
   return (
-    <div className="flex items-center flex-col w-full">
+    <div className="flex items-center flex-col w-full px-4">
       {/* <h1 className="font-bold text-3xl text-center">Forums</h1> */}
 
       {user ? (
@@ -99,7 +99,7 @@ const Forums = () => {
               return (
                 <Link
                   href={"/forums/" + post.id}
-                  className="card card-compact transition-all duration-200 hover:-translate-y-1 flex flex-col gap-y-2 px-8 py-6 hover:cursor-pointer hover:bg-gray-200/90 border hover:shadow active:bg-transparent"
+                  className="card card-compact transition-all duration-200 hover:-translate-y-1 flex flex-col gap-y-2 px-8 py-6 hover:cursor-pointer hover:bg-gray-200/90  border hover:shadow active:bg-transparent"
                   key={post.id}
                 >
                   <div className="flex items-center gap-x-2 mb-2">
