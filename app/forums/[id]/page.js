@@ -25,17 +25,17 @@ const Post = ({ params }) => {
   };
 
   return (
-    <div>
+    <div className="w-full flex items-center flex-col">
       {post ? (
         <>
-          <button
-            className="btn btn-ghost btn-circle mb-4"
-            onClick={() => router.back()}
-          >
-            <BackIcon />
-          </button>
+          <article className="prose prose-p:whitespace-pre-wrap w-full md:min-w-[65ch] px-4">
+            <button
+              className="btn btn-ghost btn-circle mb-4"
+              onClick={() => router.back()}
+            >
+              <BackIcon />
+            </button>
 
-          <article className="prose prose-p:whitespace-pre-wrap min-w-[65ch]">
             <h1 className="mb-2">{post.title}</h1>
 
             <div className="flex items-center gap-x-2 mb-0 relative bottom-6">
