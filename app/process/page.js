@@ -1,8 +1,14 @@
+"use client";
+
 const Process = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <article className="prose prose-h1:text-center pt-4 px-6">
       <h1>Our Process</h1>
-      <p>
+      <p className="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa
         sed elementum tempus egestas sed. Adipiscing vitae proin sagittis nisl
@@ -31,7 +37,36 @@ const Process = () => {
         sagittis nisl. Gravida arcu ac tortor dignissim convallis aenean.
         Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
       </p>
+
+      <div
+        onClick={scrollToTop}
+        className="flex btn btn-ghost items-center font-bold"
+      >
+        <label>Back to top</label>
+        <button>
+          <UpArrow />
+        </button>
+      </div>
     </article>
+  );
+};
+
+const UpArrow = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 15.75l7.5-7.5 7.5 7.5"
+      />
+    </svg>
   );
 };
 export default Process;

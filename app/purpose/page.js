@@ -1,4 +1,10 @@
+"use client";
+
 const Purpose = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <article className="prose prose-h1:text-center pt-4 px-auto lg px-6">
       <h1>Our Purpose</h1>
@@ -68,9 +74,12 @@ const Purpose = () => {
         and patient-centric.
       </p>
 
-      <div className="flex btn btn-ghost items-center font-bold">
+      <div
+        onClick={scrollToTop}
+        className="flex btn btn-ghost items-center font-bold"
+      >
         <label>Back to top</label>
-        <button className="">
+        <button>
           <UpArrow />
         </button>
       </div>
