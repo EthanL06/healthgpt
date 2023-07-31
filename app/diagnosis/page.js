@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 const Diagnosis = () => {
   const [message, setMessage] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const [messagesArray, setMessagesArray] = useState([
     {
@@ -71,6 +72,7 @@ const Diagnosis = () => {
               handleMessageSend();
             }
           }}
+          disabled={true}
         />
 
         <button

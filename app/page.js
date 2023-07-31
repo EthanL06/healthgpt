@@ -71,14 +71,19 @@ const Diagnosis = () => {
               handleMessageSend();
             }
           }}
+          disabled={messagesArray[messagesArray.length - 1].isUser}
         />
 
-        <button
-          onClick={handleMessageSend}
-          className="btn btn-square btn-ghost text-gray-500 flex items-center justify-center"
-        >
-          <SendIcon />
-        </button>
+        {messagesArray[messagesArray.length - 1].isUser ? (
+          <div className="loading loading-dots loading-lg text-brand"></div>
+        ) : (
+          <button
+            onClick={handleMessageSend}
+            className="btn btn-square btn-ghost text-gray-500 flex items-center justify-center"
+          >
+            <SendIcon />
+          </button>
+        )}
       </div>
     </div>
   );
