@@ -3,13 +3,15 @@
 import { useEffect, useState, useRef } from "react";
 
 const Diagnosis = () => {
+  const [message, setMessage] = useState("");
+
   const [messagesArray, setMessagesArray] = useState([
     {
       text: "Hello, I am HealthGPT, an AI-powered patient diagnosis tool.",
       isUser: false,
     },
     {
-      text: "I will ask you a series of questions to help diagnose your patient.",
+      text: "Enter in all relevant information regarding the patient.",
       isUser: false,
     },
   ]);
@@ -17,13 +19,30 @@ const Diagnosis = () => {
   const chatRef = useRef(null);
 
   const handleMessageSend = (e) => {
-    const input = document.getElementById("message-input");
+    const input = document.getElementById("message-input").value;
 
-    if (input.value.trim() === "") return;
-    setMessagesArray([...messagesArray, { text: input.value, isUser: true }]);
+    if (input.trim() === "") return;
+    setMessagesArray([...messagesArray, { text: input, isUser: true }]);
 
-    // Clear input
-    input.value = "";
+    document.getElementById("message-input").value = "";
+
+    // Send message to backend
+    fetch("api/query", {
+      method: "POST",
+      body: JSON.stringify({
+        message: message,
+      }),
+    }).then((res) => {
+      console.log(res);
+      res.json().then((data) => {
+        console.log(data);
+        setMessagesArray([
+          ...messagesArray,
+          { text: input, isUser: true },
+          { text: data.text, isUser: false },
+        ]);
+      });
+    });
   };
 
   useEffect(() => {
@@ -44,6 +63,9 @@ const Diagnosis = () => {
           placeholder="Ask for more information..."
           className="input input-bordered w-full shadow"
           autoComplete="off"
+          onChange={(e) => {
+            setMessage(e.target.value);
+          }}
           onKeyUp={(e) => {
             if (e.key === "Enter") {
               handleMessageSend();
