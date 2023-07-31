@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col pt-4 w-full sm:w-[30rem] items-center gap-y-2 px-8">
+      <div className="flex flex-col pt-12 w-full sm:w-[30rem] items-center gap-y-2 px-8">
         <div className="font-bold text-2xl text-center">
           Enter patient&apos;s symptoms.
         </div>

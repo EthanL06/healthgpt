@@ -8,31 +8,72 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="flex-1">
-        <DarkModeToggle />
-      </div>
+    <>
+      <div class="navbar flex items-end bg-none">
+        <div class="navbar-start">
+          <div class="dropdown lg:hidden">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/process">Process</Link>
+              </li>
+              <li>
+                <Link href="/purpose">Purpose</Link>
+              </li>
+            </ul>
+          </div>
 
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1 font-semibold gap-x-2">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/process">Process</Link>
-          </li>
-          <li>
-            <Link href="/purpose">Purpose</Link>
-          </li>
-        </ul>
+          <ul className="hidden lg:flex menu menu-horizontal px-1 font-semibold gap-x-2">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/process">Process</Link>
+            </li>
+            <li>
+              <Link href="/purpose">Purpose</Link>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-center flex flex-col items-center text-center relative">
+          <h1 className="font-bold text-3xl">
+            Health<span className="text-brand">GPT</span>
+          </h1>
+          <div className="text-lg">An AI-Powered Patient Diagnosis Tool</div>
+        </div>
+        <div class="navbar-end">
+          <DarkModeToggle />
+        </div>
       </div>
-    </div>
+      <div className="divider"></div>
+    </>
   );
 };
 
 const DarkModeToggle = () => {
   return (
-    <label className="btn btn-square btn-ghost swap swap-rotate">
+    <label className="btn btn-circle btn-ghost swap swap-rotate">
       <input data-toggle-theme="light,dark" type="checkbox" />
 
       <svg

@@ -32,7 +32,7 @@ const Diagnosis = () => {
   }, [messagesArray]);
 
   return (
-    <div className="w-full sm:w-[40rem] font-medium px-4 pb-10">
+    <div className="w-full sm:w-[40rem] font-medium pt-12">
       {messagesArray.map((message, index) => (
         <TextBubble text={message.text} isUser={message.isUser} key={index} />
       ))}
