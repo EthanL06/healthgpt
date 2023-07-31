@@ -10,7 +10,7 @@ export async function POST(req) {
   });
   const openai = new OpenAIApi(configuration);
   const chat_completion = await openai.createCompletion({
-    model: "gpt-3.5-turbo",
+    model: "davinci:ft-personal-2023-07-31-20-07-32",
     prompt: `You are HealthGPT, a patient diagnosis tool to help healthcare workers confirm their diagnosis. When you receive a description from a healthcare worker, simply verify or deliver the correct diagnosis or treatment plan, nothing else. Please do not add anything extra information that is not health-related or may confuse professionals. Your target audience is healthcare professionals so do not add any unnecessary or extra information that these professionals would already know. Only deliver health-related instructions. Do not repeat any unnecessary information. Solely deliver diagnostic. Finish your answer in a complete sentence. Here is the description: ${data.message}`, //replace this prompt according to your data
     max_tokens: 150,
   });
