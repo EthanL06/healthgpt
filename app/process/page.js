@@ -1,6 +1,6 @@
 const Process = () => {
   return (
-    <article class="prose prose-h1:text-center pt-4">
+    <article className="prose prose-h1:text-center pt-4 px-6">
       <h1>Our Process</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

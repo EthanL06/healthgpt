@@ -1,8 +1,8 @@
 const Purpose = () => {
   return (
-    <article class="prose prose-h1:text-center pt-4">
+    <article className="prose prose-h1:text-center pt-4 px-auto lg px-6">
       <h1>Our Purpose</h1>
-      <p>
+      <p className="">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa
         sed elementum tempus egestas sed. Adipiscing vitae proin sagittis nisl
