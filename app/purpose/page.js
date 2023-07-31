@@ -12,13 +12,15 @@ const Purpose = () => {
         Our innovative HealthGPT-based website has a dual mission: to address
         the challenges of burnout commonly faced by doctors and to reduce the
         risk of misdiagnoses, which can have severe consequences on patient
-        outcomes. In the United States alone, 12 million patients are
-        misdiagnosed every year, resulting in nearly 370,000 deaths.
-        Furthermore, an alarming 63% of physicians report symptoms of burnout
-        while caring for patients. Recognizing these critical issues, our
-        website steps in to alleviate the problem by providing doctors with a
-        powerful and reliable helping hand in diagnosing medical conditions more
-        accurately and efficiently.
+        outcomes.
+      </p>
+      <p>
+        In the United States alone, 12 million patients are misdiagnosed every
+        year, resulting in nearly 370,000 deaths. Furthermore, an alarming 63%
+        of physicians report symptoms of burnout while caring for patients.
+        Recognizing these critical issues, our website steps in to alleviate the
+        problem by providing doctors with a powerful and reliable helping hand
+        in diagnosing medical conditions more accurately and efficiently.
       </p>
       <p>
         To tackle the issue of misdiagnoses, our website acts as a crucial
