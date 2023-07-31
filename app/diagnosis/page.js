@@ -19,7 +19,7 @@ const Diagnosis = () => {
   const handleMessageSend = (e) => {
     const input = document.getElementById("message-input");
 
-    console.log(input.value);
+    if (input.value.trim() === "") return;
     setMessagesArray([...messagesArray, { text: input.value, isUser: true }]);
 
     // Clear input
@@ -37,7 +37,7 @@ const Diagnosis = () => {
         <TextBubble text={message.text} isUser={message.isUser} key={index} />
       ))}
 
-      <div className="flex items-center gap-x-4 mt-4" ref={chatRef}>
+      <div className="flex items-center gap-x-4 mt-6" ref={chatRef}>
         <input
           id="message-input"
           type="text"
@@ -53,7 +53,7 @@ const Diagnosis = () => {
 
         <button
           onClick={handleMessageSend}
-          className="btn btn-square text-gray-500 flex items-center justify-center"
+          className="btn btn-square btn-ghost text-gray-500 flex items-center justify-center"
         >
           <SendIcon />
         </button>
