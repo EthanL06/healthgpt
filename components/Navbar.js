@@ -36,6 +36,9 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
+                <Link href="/forums">Forums</Link>
+              </li>
+              <li>
                 <Link href="/process">Process</Link>
               </li>
               <li>
@@ -49,6 +52,9 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
+              <Link href="/forums">Forums</Link>
+            </li>
+            <li>
               <Link href="/process">Process</Link>
             </li>
             <li>
@@ -56,14 +62,17 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-center flex flex-col items-center text-center relative">
+        <Link
+          href={"/"}
+          className="navbar-center flex flex-col items-center text-center relative"
+        >
           <h1 className="font-bold text-3xl">
             Health<span className="text-brand">GPT</span>
           </h1>
           <div className="text-lg hidden sm:block">
             An AI-Powered Patient Diagnosis Tool
           </div>
-        </div>
+        </Link>
         <div className="navbar-end">
           <DarkModeToggle />
         </div>
