@@ -9,33 +9,39 @@ const Process = () => {
     <article className="prose prose-h1:text-center pt-4 px-6">
       <h1>Our Process</h1>
       <p className="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa
-        sed elementum tempus egestas sed. Adipiscing vitae proin sagittis nisl
-        rhoncus. Enim tortor at auctor urna. Nec ultrices dui sapien eget mi
-        proin sed libero. Ac feugiat sed lectus vestibulum. Mauris commodo quis
-        imperdiet massa tincidunt nunc pulvinar. Iaculis nunc sed augue lacus
-        viverra vitae congue eu consequat. Id leo in vitae turpis massa. Nunc
-        consequat interdum varius sit amet mattis vulputate enim. Eu non diam
-        phasellus vestibulum lorem sed risus ultricies. Velit sed ullamcorper
-        morbi tincidunt ornare massa eget egestas. Blandit cursus risus at
-        ultrices mi. Ut lectus arcu bibendum at varius vel. Libero id faucibus
-        nisl tincidunt eget nullam non.
+        In our pursuit of developing a cutting-edge solution for medical
+        diagnostics, we embarked on a two-fold strategy to harness the power of
+        natural language processing.
       </p>
       <p>
-        Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque.
-        Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.
-        Nunc lobortis mattis aliquam faucibus purus in massa. In hac habitasse
-        platea dictumst. Quis blandit turpis cursus in hac habitasse platea
-        dictumst. Leo vel fringilla est ullamcorper eget nulla facilisi etiam.
-        Nulla at volutpat diam ut. Porta lorem mollis aliquam ut porttitor leo a
-        diam. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl.
-        Egestas sed sed risus pretium quam vulputate dignissim suspendisse in.
-        Arcu non odio euismod lacinia at quis risus. Faucibus purus in massa
-        tempor nec feugiat nisl pretium fusce. Eget lorem dolor sed viverra
-        ipsum nunc aliquet bibendum enim. Eleifend quam adipiscing vitae proin
-        sagittis nisl. Gravida arcu ac tortor dignissim convallis aenean.
-        Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
+        Initially, we carefully selected a lightweight large language model
+        (LLM) that had already undergone pre-training on a vast corpus of
+        diverse text, encompassing billions of parameters. This pre-trained
+        model exhibited a remarkable understanding of language and could
+        generate coherent responses to a wide array of queries. However,
+        recognizing the unique demands of our medical diagnostics use case, we
+        understood the significance of fine-tuning the model to ensure its
+        seamless integration with our specific requirements.
+      </p>
+
+      <p>
+        To accomplish this, we meticulously curated a comprehensive dataset
+        comprising medical diagnostics information, featuring an array of
+        symptoms, conditions, and diagnostic insights. This dataset served as
+        the bedrock for the fine-tuning process, providing the model with an
+        accurate and tailored source of data to draw upon during its learning
+        phase.
+      </p>
+
+      <p>
+        Through fine-tuning, we sought to imbue the model with domain-specific
+        knowledge, enabling it to grasp intricate medical terminologies,
+        identify subtle symptomatology, and deliver precise and contextually
+        relevant diagnostic information. The convergence of a pre-trained
+        lightweight LLM model with a targeted medical diagnostics dataset served
+        as the cornerstone of our endeavor, empowering us to provide a
+        sophisticated and trustworthy AI-driven solution for medical
+        practitioners and patients alike.
       </p>
 
       <div
