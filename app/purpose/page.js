@@ -39,7 +39,7 @@ const Purpose = () => {
       </p>
 
       <p>
-        Our website enhances doctors' diagnostic capabilities by leveraging
+        Our website enhances doctors&apos; diagnostic capabilities by leveraging
         advanced artificial intelligence and natural language processing. It
         analyzes the symptoms provided and offers real-time, data-driven
         insights, drawing from vast medical knowledge and up-to-date research.
