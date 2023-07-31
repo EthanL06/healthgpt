@@ -86,7 +86,11 @@ const Diagnosis = () => {
 
 const TextBubble = ({ text, isUser }) => {
   return (
-    <div className={`chat ${isUser ? "chat-end" : "chat-start"}`}>
+    <div
+      className={`chat ${
+        isUser ? "chat-end" : "chat-start"
+      } whitespace-pre-wrap`}
+    >
       <div
         className={`chat-bubble ${
           isUser ? "chat-bubble-primary" : "bg-[#D1D5DB] text-[#212121]"
