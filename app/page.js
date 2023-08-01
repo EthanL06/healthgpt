@@ -27,12 +27,11 @@ const Diagnosis = () => {
     setMessagesArray([...messagesArray, { text: input, isUser: true }]);
 
     document.getElementById("message-input").value = "";
-
     // Send message to backend
     fetch("api/query", {
       method: "POST",
       body: JSON.stringify({
-        message: message,
+        message: input,
       }),
     }).then((res) => {
       console.log(res);
