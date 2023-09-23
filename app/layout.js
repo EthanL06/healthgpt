@@ -1,5 +1,7 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import "./globals.css";
 import { Manrope } from "next/font/google";
 
@@ -17,6 +19,7 @@ export default function RootLayout({ children }) {
           <Navbar />
 
           {children}
+          <Analytics />
         </body>
       </html>
     </>
