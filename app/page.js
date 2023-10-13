@@ -1,5 +1,6 @@
 "use client";
 
+import { incrementViews } from "@/firebase/views/views";
 import { useEffect, useState, useRef } from "react";
 
 const Diagnosis = () => {
@@ -49,6 +50,13 @@ const Diagnosis = () => {
   useEffect(() => {
     // Scroll to bottom of chat
     chatRef.current.scrollIntoView({ behavior: "smooth" });
+    const firstTime = localStorage.getItem("firstTime");
+
+    if (firstTime === null) {
+      console.log("First time");
+      incrementViews();
+      localStorage.setItem("firstTime", "false");
+    }
   }, [messagesArray]);
 
   return (
